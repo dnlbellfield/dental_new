@@ -28,35 +28,45 @@
          <div id="toggle-nav" class="navbar-collapse collapse">
             <ul class="navbar-nav">
                <li class="nav-item"> <a class="nav-link" href="{% url 'home' %}">Daniel Bellfield</a> </li>
-               <li class="nav-item"> <a class="nav-link" href="{% url 'about' %}">About</a> </li>
+               <!-- <li class="nav-item"> <a class="nav-link" href="{% url 'about' %}">About</a> </li> -->
                <li class="nav-item"> <a class="nav-link" href="{% url 'contact' %}">Contact</a> </li>
             </ul>
             <div id="social"><p>Daniel Bellfield Software Engineer</p></div>
          </div>
       </nav>
       <!-- Contact -->
-      <div class="container-fluid contact">
+      
+      <div class="container-fluid contact ">
+         
          <div class="row">
             <div class="col-md-10 offset-md-1">
                <div class="row">
                   <div class="col-md-6 col-sm-12">
-                     <p>
-                        Resolved to in believed desirous weddings together enjoyed cousins herself<br>
-                        arizonaarchitects@hollers.com
-                        <br><br>
-                        Explain few led parties attacks company  <br>
-                        On sure fine kept walk am in it.
-                        <br><br>
-                        Smiling nothing affixed he carried.<br>
-                        arizonaarchitects@hollers.com
-                     </p>
+                     <form id="contact" action="{% url 'contact' %}" method="post">
+                        {% csrf_token %}
+                        <h2>Get In Touch</h2>
+                    
+                        <fieldset>
+                          <input name="message-name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+                        </fieldset>
+                        <fieldset>
+                          <input name="message-email" placeholder="Your Email" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                          <textarea name="message" placeholder="Your message" tabindex="5" required></textarea>
+                        </fieldset>
+                        <fieldset>
+                          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                        </fieldset>
+               
+                      </form>
                   </div>
                   <div class="col-md-5 offset-md-1 col-sm-12">
                      <p>
-                        ARIZONA ARCHITECTS<br>
-                        212  Masonic Hill Road<br>
-                        18335 - MARSHALLS CREEK - Pennsylvania<br>
-                        TEL. +1 501-529-4700
+                        Daniel Bellfield<br>
+                         EMAIL: dnlbellfield@gmail.com <br>
+
+                        TEL: 1 (805) 890-0868
                      </p>
                   </div>
                </div>
@@ -68,13 +78,16 @@
       <div class="container-fluid contact-form">
          <div class="row">
             <div class="col-md-10 offset-md-1 col-sm-12">
-               <h2> Shall we call you? Give us your number </h2>
+               <div class="container">  
+                
+                </div>
+               <!-- <h2> Shall we call you? Give us your number </h2>
                <form class="form-inline pt-5">
                   <div class="form-group mb-2">
                      <input type="phone" class="form-control" id="inputPhone" placeholder="Your phone number">
                   </div>
                   <button type="submit" class="mx-sm-4 btn btn-primary mb-2">SUBMIT</button>
-               </form>
+               </form> -->
             </div>
          </div>
       </div>

@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from vitamin import key
+from vitamin import key, passy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -113,3 +113,18 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static' ),
 ]
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'dnlbellfield@gmail.com'
+EMAIL_HOST_PASSWORD = passy
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+#python -m smtpd -n -c DebuggingServer localhost:1025
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 1025
+# EMAIL_HOST_USER = ''
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_USE_TLS = False
