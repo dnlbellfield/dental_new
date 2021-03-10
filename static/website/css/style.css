@@ -1,6 +1,8 @@
+body {
+  background-color: white;
+}
 header {
   text-align: left;
-  background: white;
   margin: 20px 0;
   padding: 10px;
 }
@@ -10,7 +12,7 @@ h1{
 }
 .new-class {
   text-align: left;
-  background: white;
+
   margin: 40px 100px;
   padding: 10px;
 	padding-right: 40px;
@@ -20,5 +22,9 @@ h2{
 }
 
 span {
-	text-decoration-color: darkgray;
+	color:rgb(165, 165, 190);
 }
+a {
+  color: rgb(100, 127, 224);
+}
+
