@@ -3,7 +3,7 @@ import django_heroku
 import dj_database_url
 from decouple import config
 from pathlib import Path
-from vitamin import key, passy
+# from vitamin import key, passy
 
 
 
