@@ -1,10 +1,10 @@
 import os
 import django_heroku
-import dj_database_url
+# import dj_database_url
 from decouple import config
 from pathlib import Path
 from vitamin import key, passy
-
+import dj-database-url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +20,7 @@ SECRET_KEY = key
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -79,6 +79,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config()
+DATABASES[‘default’].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
