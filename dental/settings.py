@@ -1,10 +1,10 @@
 import os
 import django_heroku
-# import dj_database_url
+heroku logs --tail
 from decouple import config
 from pathlib import Path
 from vitamin import key, passy
-import dj-database-url
+# import dj-database-url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
