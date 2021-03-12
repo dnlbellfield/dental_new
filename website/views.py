@@ -23,3 +23,6 @@ def contact(request):
 
   else: 
     return render(request, 'contact.html', {})    
+
+def new_index (request):
+  return render(request, 'new_index.html', {})    
