@@ -4554,6 +4554,8 @@
 		li .button {
 			background-color: #000000;
 			margin-top: 3%;
+			padding-left: 5%;
+    	padding-right: 5%;
 			/* border: none;
 			color: white;
 			padding: 15px 32px;
