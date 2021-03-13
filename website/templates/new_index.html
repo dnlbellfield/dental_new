@@ -17,7 +17,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="logo"><strong>Daniel Bellfield</strong>- Software Engineer</a>
+				<a href="{% url 'new_index' %}" class="logo"><strong>Daniel Bellfield</strong>- Software Engineer</a>
 				<nav>
 					<a href="#menu">Menu</a>
 				</nav>
@@ -26,9 +26,11 @@
 		<!-- Nav -->
 			<nav id="menu">
 				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
+					<li><a href="{% url 'new_index' %}">Home</a></li>
+					<li><a href="{% url 'contact' %}">Contact</a></li>
+					<li><a href=" https://pdfhost.io/v/8AYCVWPwU_Daniel_Bellfield_Resume_2021.pdf" target="_blank">Resume</a></li> 
+					<li><a href="https://github.com/dnlbellfield" target="_blank">GitHub</a></li>
+					<li><a href="https://chromium-review.googlesource.com/q/status:merged+%253Cbellfield%253E" target="_blank">Google Code Review</a></li> 
 				</ul>
 			</nav>
 
@@ -36,34 +38,41 @@
 			<section id="main">
 				<div class="inner">
 					<div class="image fit">
-						<img src="images/pic11.jpg" alt="" />
+						<img src="{% static 'website/new_img/pic11.jpg'%}" alt="" />
 					</div>
 					<header>
-						<h1>Lorem ipsum dolor sit amet</h1>
-						<!-- <p class="info">3 days ago by <a href="#">Jane Doe</a></p> -->
+						<!-- <h2><a href="{% url 'contact' %}">Contact</a></h2>
+                              <h2><a href="https://pdfhost.io/v/8AYCVWPwU_Daniel_Bellfield_Resume_2021.pdf" target="_blank">Resume</a></h2>
+                              <h2><a href="https://github.com/dnlbellfield" target="_blank">GitHub</a></h2></h2>
+                              <h2><a href="https://chromium-review.googlesource.com/q/status:merged+%253Cbellfield%253E" target="_blank">Google Code Review</a></h2> -->
 					</header>
-					<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel. Nunc ullamcorper ipsum at diam congue luctus. Sed nec sapien blandit, tempor quam non, consectetur turpis. Morbi libero lorem, hendrerit sed metus non, malesuada placerat nulla. Sed nisi turpis, rutrum eget rutrum euismod, consequat ullamcorper eros. Quisque tortor nunc, sodales convallis nisl non, bibendum tincidunt tortor. Etiam pellentesque tincidunt nunc, a dignissim dolor tempus et. Pellentesque in urna ligula. Fusce ligula velit, mollis ac diam non, rutrum fringilla turpis.</p>
-					<p>Aliquam consequat, nulla sed sodales convallis, sem odio porttitor justo, non volutpat augue libero eget neque. Nunc consequat arcu nec tortor venenatis tempus a placerat mauris. Nam ultricies consequat ligula, et placerat arcu ultrices a. Sed placerat ipsum lacus, at imperdiet nisi imperdiet at. Vivamus diam dui, accumsan quis lacinia ac, sollicitudin feugiat metus. Vestibulum a velit ac eros blandit molestie non eget erat. Nunc eget odio erat. Nulla sit amet enim pharetra tortor molestie tempor nec sed turpis. Cras eget odio at erat dictum tincidunt. Sed facilisis convallis mi, eget tempor nunc pellentesque pulvinar. Etiam volutpat luctus tristique.</p>
-					<p>Aliquam erat eros, pretium non facilisis id, mollis a lacus. Nam nunc nisl, consequat at est vel, ornare feugiat tortor. Phasellus tempor ex vel mi blandit convallis. Sed accumsan sapien quis bibendum posuere. Vivamus convallis mattis ipsum. Suspendisse viverra purus non mi cursus, vitae pulvinar dui condimentum. Donec dui lacus, pretium in neque vitae, laoreet tempus nulla. Maecenas ac augue bibendum, consectetur ante eu, vulputate ipsum.</p>
-					<p>Nullam volutpat, sem at hendrerit volutpat, magna orci facilisis purus, et venenatis sapien sapien pretium libero. Duis hendrerit eget metus at molestie. Duis leo lorem, interdum a placerat ut, ullamcorper at eros. Donec convallis auctor cursus. Integer placerat felis mauris, sed cursus diam sodales et. Phasellus mi nibh, scelerisque vulputate viverra ut, dictum vitae mi. In at blandit felis. Aenean id porttitor neque. Nam bibendum a orci non pretium. Pellentesque feugiat erat augue, quis venenatis diam mollis eu.</p>
 					<header>
-						<h1>Lorem ipsum dolor sit amet</h1>
+						<h1>Experience</h1>
+						<h3>Chrome Contributor, Google, Dec 2020 - Present </h3>
+					</header>
+					<p>
+						Worked alongside the Google devTools team and identified issues, fixed bugs, and used Google’s code review system. 
+						Worked on Google’s open source project Chromium and helped improve a large code base.
+						Read previous code changes and discussed best practice with the Google team and other contributors.Fixed a bug that caused a text overlap in the throttling section of DevTools Settings.</p>
+					<header>
+						<h3>Open Source Contribution:</h3>
 						<!-- <p class="info">3 days ago by <a href="#">Jane Doe</a></p> -->
 					</header>
-					<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel. Nunc ullamcorper ipsum at diam congue luctus. Sed nec sapien blandit, tempor quam non, consectetur turpis. Morbi libero lorem, hendrerit sed metus non, malesuada placerat nulla. Sed nisi turpis, rutrum eget rutrum euismod, consequat ullamcorper eros. Quisque tortor nunc, sodales convallis nisl non, bibendum tincidunt tortor. Etiam pellentesque tincidunt nunc, a dignissim dolor tempus et. Pellentesque in urna ligula. Fusce ligula velit, mollis ac diam non, rutrum fringilla turpis.</p>
-					<p>Aliquam consequat, nulla sed sodales convallis, sem odio porttitor justo, non volutpat augue libero eget neque. Nunc consequat arcu nec tortor venenatis tempus a placerat mauris. Nam ultricies consequat ligula, et placerat arcu ultrices a. Sed placerat ipsum lacus, at imperdiet nisi imperdiet at. Vivamus diam dui, accumsan quis lacinia ac, sollicitudin feugiat metus. Vestibulum a velit ac eros blandit molestie non eget erat. Nunc eget odio erat. Nulla sit amet enim pharetra tortor molestie tempor nec sed turpis. Cras eget odio at erat dictum tincidunt. Sed facilisis convallis mi, eget tempor nunc pellentesque pulvinar. Etiam volutpat luctus tristique.</p>
-					<p>Aliquam erat eros, pretium non facilisis id, mollis a lacus. Nam nunc nisl, consequat at est vel, ornare feugiat tortor. Phasellus tempor ex vel mi blandit convallis. Sed accumsan sapien quis bibendum posuere. Vivamus convallis mattis ipsum. Suspendisse viverra purus non mi cursus, vitae pulvinar dui condimentum. Donec dui lacus, pretium in neque vitae, laoreet tempus nulla. Maecenas ac augue bibendum, consectetur ante eu, vulputate ipsum.</p>
-					<p>Nullam volutpat, sem at hendrerit volutpat, magna orci facilisis purus, et venenatis sapien sapien pretium libero. Duis hendrerit eget metus at molestie. Duis leo lorem, interdum a placerat ut, ullamcorper at eros. Donec convallis auctor cursus. Integer placerat felis mauris, sed cursus diam sodales et. Phasellus mi nibh, scelerisque vulputate viverra ut, dictum vitae mi. In at blandit felis. Aenean id porttitor neque. Nam bibendum a orci non pretium. Pellentesque feugiat erat augue, quis venenatis diam mollis eu.</p>
+					<p>Fixed text overlap in the
+						throttling section of DevTools Settings <a href="https://chromium-review.googlesource.com/c/devtools/devtools-frontend/+/2611909/">(merged code)</a> </p>
 				
 					<header>
-						<h1>Lorem ipsum dolor sit amet</h1>
+						<h1>Education</h1>
 						<!-- <p class="info">3 days ago by <a href="#">Jane Doe</a></p> -->
 					</header>
-					<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel. Nunc ullamcorper ipsum at diam congue luctus. Sed nec sapien blandit, tempor quam non, consectetur turpis. Morbi libero lorem, hendrerit sed metus non, malesuada placerat nulla. Sed nisi turpis, rutrum eget rutrum euismod, consequat ullamcorper eros. Quisque tortor nunc, sodales convallis nisl non, bibendum tincidunt tortor. Etiam pellentesque tincidunt nunc, a dignissim dolor tempus et. Pellentesque in urna ligula. Fusce ligula velit, mollis ac diam non, rutrum fringilla turpis.</p>
-					<p>Aliquam consequat, nulla sed sodales convallis, sem odio porttitor justo, non volutpat augue libero eget neque. Nunc consequat arcu nec tortor venenatis tempus a placerat mauris. Nam ultricies consequat ligula, et placerat arcu ultrices a. Sed placerat ipsum lacus, at imperdiet nisi imperdiet at. Vivamus diam dui, accumsan quis lacinia ac, sollicitudin feugiat metus. Vestibulum a velit ac eros blandit molestie non eget erat. Nunc eget odio erat. Nulla sit amet enim pharetra tortor molestie tempor nec sed turpis. Cras eget odio at erat dictum tincidunt. Sed facilisis convallis mi, eget tempor nunc pellentesque pulvinar. Etiam volutpat luctus tristique.</p>
-					<p>Aliquam erat eros, pretium non facilisis id, mollis a lacus. Nam nunc nisl, consequat at est vel, ornare feugiat tortor. Phasellus tempor ex vel mi blandit convallis. Sed accumsan sapien quis bibendum posuere. Vivamus convallis mattis ipsum. Suspendisse viverra purus non mi cursus, vitae pulvinar dui condimentum. Donec dui lacus, pretium in neque vitae, laoreet tempus nulla. Maecenas ac augue bibendum, consectetur ante eu, vulputate ipsum.</p>
-					<p>Nullam volutpat, sem at hendrerit volutpat, magna orci facilisis purus, et venenatis sapien sapien pretium libero. Duis hendrerit eget metus at molestie. Duis leo lorem, interdum a placerat ut, ullamcorper at eros. Donec convallis auctor cursus. Integer placerat felis mauris, sed cursus diam sodales et. Phasellus mi nibh, scelerisque vulputate viverra ut, dictum vitae mi. In at blandit felis. Aenean id porttitor neque. Nam bibendum a orci non pretium. Pellentesque feugiat erat augue, quis venenatis diam mollis eu.</p>
-				
+					<p>California State University Dominguez Hills, Carson, CA<br>
+						B.A. - Digital Media Arts  -2014
+				 	</p>
+					 <header>
+						<h1>Technologies</h1>
+						<!-- <p class="info">3 days ago by <a href="#">Jane Doe</a></p> -->
+					</header>
+					<p>JavaScript, HTML, CSS, Git, Django, Python, Test Driven Development. </p>
 				
 				</div>
 
@@ -72,22 +81,23 @@
 
 		<!-- Footer -->
 			<footer id="footer">
-				<ul class="icons">
+				<!-- <ul class="icons">
 					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
+				</ul> -->
 				<div class="copyright">
-					&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+				<p>Daniel Bellfield 2021</p>
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- {% static 'website/'%} -->
+			<script src="{% static 'website/new_js/jquery.min.js'%}"></script>
+			<script src="{% static 'website/new_js/jquery.scrolly.min.js'%}"></script>
+			<script src="{% static 'website/new_js/skel.min.js'%}"></script>
+			<script src="{% static 'website/new_js/util.js'%}"></script>
+			<script src="{% static 'website/new_js/main.js'%}"></script>
 
 	</body>
 </html>

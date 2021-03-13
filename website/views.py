@@ -19,10 +19,10 @@ def contact(request):
       ['dnlbellfield@gmail.com'], # to email
       fail_silently=False,
     )
-    return render(request, 'contact.html', {'message_name': message_name})
+    return render(request, 'new_contact.html', {'message_name': message_name})
 
   else: 
-    return render(request, 'contact.html', {})    
+    return render(request, 'new_contact.html', {})    
 
 def new_index (request):
   return render(request, 'new_index.html', {})    

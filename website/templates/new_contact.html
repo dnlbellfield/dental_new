@@ -1,0 +1,135 @@
+{% load static %}
+<!-- {% static 'website/'%} -->
+<!DOCTYPE HTML>
+<!--
+	Binary by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Daniel Bellfield - Software Engineer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static 'website/css/new_style.css'%}" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="{% url 'new_index' %}" class="logo"><strong>Daniel Bellfield</strong>- Software Engineer</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+      <!-- Nav -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="{% url 'new_index' %}">Home</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href=" https://pdfhost.io/v/8AYCVWPwU_Daniel_Bellfield_Resume_2021.pdf" target="_blank">Resume</a></li> 
+          <li><a href="https://github.com/dnlbellfield" target="_blank">GitHub</a></li>
+          <li><a href="https://chromium-review.googlesource.com/q/status:merged+%253Cbellfield%253E" target="_blank">Google Code Review</a></li> 
+        </ul>
+      </nav>
+
+		<!-- Main -->
+			<section id="main">
+				<div class="inner">
+					<div class="image fit">
+						<img src="{% static 'website/new_img/pic11.jpg'%}" alt="" />
+					</div>
+					<header>
+						<h3>Get In Touch</h3>
+				 </header>
+						<!-- <div class="new-class">
+							 
+							 <h2><a  href="{% url 'home' %}">Home</a></h2>
+							 
+																 <h2><a href="https://pdfhost.io/v/8AYCVWPwU_Daniel_Bellfield_Resume_2021.pdf" target="_blank">Resume</a></h2>
+																 <h2><a href="https://github.com/dnlbellfield" target="_blank">GitHub</a></h2></h2>
+																 <h2><a href="https://chromium-review.googlesource.com/q/status:merged+%253Cbellfield%253E" target="_blank">Google Code Review</a></h2>
+						</div>
+						 -->
+						<div class="new-class">
+						 
+							 
+							 <!-- <form id="contact" action="{% url 'contact' %}" method="post">
+									{% csrf_token %}
+									<h2>Get In Touch</h2>
+							
+									<fieldset>
+										<input name="message-name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+									</fieldset>
+									<fieldset>
+										<input name="message-email" placeholder="Your Email" type="email" tabindex="2" required>
+									</fieldset>
+									<fieldset>
+										<textarea name="message" placeholder="Your message" tabindex="5" required></textarea>
+									</fieldset>
+									<fieldset>
+										<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+									</fieldset>
+					
+								</form> -->
+						
+					{% if message_name %}  
+						<center><h3> Thanks, {{message_name}}!</h3>
+							 <br>
+						I received your email and will contact you shortly.
+				 </center>
+				 {% endif %}
+	 
+				 </header>
+					<form id="contact" action="{% url 'contact' %}" method="post">
+						{% csrf_token %}
+						<ul class="form-style-1">
+								<li><label>Name <span class="required">*</span></label><input type="text" name="message-name" class="field-divided" /> </li>
+								<li>
+										<label>Email <span class="required">*</span></label>
+										<input type="email" name="message-email" class="field-long" />
+								</li>
+					 
+								<li>
+										<label>Your Message <span class="required">*</span></label>
+										<textarea name="message" id="field5" class="field-long field-textarea"></textarea>
+								</li>
+								<li>
+										<input class="button" type="submit" value="Submit" />
+								</li>
+						</ul>
+						</form>
+				 </div>
+	 
+				 <!-- Contact -->
+				 
+				 <!-- End Contact -->
+				
+				</div>
+
+				
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<!-- <ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul> -->
+				<div class="copyright">
+				<p>Daniel Bellfield 2021</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+		<!-- {% static 'website/'%} -->
+			<script src="{% static 'website/new_js/jquery.min.js'%}"></script>
+			<script src="{% static 'website/new_js/jquery.scrolly.min.js'%}"></script>
+			<script src="{% static 'website/new_js/skel.min.js'%}"></script>
+			<script src="{% static 'website/new_js/util.js'%}"></script>
+			<script src="{% static 'website/new_js/main.js'%}"></script>
+
+	</body>
+</html>
