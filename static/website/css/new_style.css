@@ -1916,7 +1916,7 @@
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: #17a689;
+			background-color: #000000;
 		}
 
 		input[type="submit"].alt,
@@ -4246,7 +4246,7 @@
 			.post.style3 input[type="button"],
 			.post.style3 button,
 			.post.style3 .button {
-				background-color: #1abc9c;
+				background-color: #000000;
 				color: #fff !important;
 			}
 
@@ -4357,7 +4357,7 @@
 					.post.style3.invert input[type="button"]:hover,
 					.post.style3.invert button:hover,
 					.post.style3.invert .button:hover {
-						background-color: #1dd2af;
+						background-color: #000000;
 					}
 
 					.post.style3.invert input[type="submit"]:active,
@@ -4365,7 +4365,7 @@
 					.post.style3.invert input[type="button"]:active,
 					.post.style3.invert button:active,
 					.post.style3.invert .button:active {
-						background-color: #17a689;
+						background-color: #000000;
 					}
 
 					.post.style3.invert input[type="submit"].alt,
