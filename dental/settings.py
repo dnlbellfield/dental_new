@@ -20,7 +20,7 @@ SECRET_KEY = key
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'https://danielbellfield.herokuapp.com/']
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    
 ]
 
 MIDDLEWARE = [
@@ -126,15 +127,24 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'dnlbellfield@gmail.com'
-EMAIL_HOST_PASSWORD = passy
-# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'Optional default value')
-
+#mailgun
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@danielbellfield.com'
+EMAIL_HOST_PASSWORD = '53f6ee3ca5d677d5e1cf1679ad95acec-73e57fef-ec27cfd2'
+# EMAIL_HOST_PASSWORD =
+
+
+
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'dnlbellfield@gmail.com'
+# EMAIL_HOST_PASSWORD = passy
+# # EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'Optional default value')
+
+
 
 #python -m smtpd -n -c DebuggingServer localhost:1025
 # EMAIL_HOST = 'localhost'

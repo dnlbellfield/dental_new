@@ -16,7 +16,7 @@ def contact(request):
       message_name, #subject - you can use var
       message, # message
       message_email, # from email
-      ['dnlbellfield@gmail.com'], # to email
+      ['admin@danielbellfield.com'], # to email
       fail_silently=False,
     )
     return render(request, 'new_contact.html', {'message_name': message_name})
@@ -26,3 +26,4 @@ def contact(request):
 
 def new_index (request):
   return render(request, 'new_index.html', {})    
+
